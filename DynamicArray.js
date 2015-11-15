@@ -114,7 +114,7 @@ function Filter() {
   var rows = tbody.rows,
       rlen = rows.length,
       arr = new Array(),
-      i, j, cells, clen;
+      i, j, cells, clen,r;
 
   for (i = 0; i < rlen; i++) {
       cells = rows[i].cells;
@@ -124,14 +124,25 @@ function Filter() {
           arr[i][j] = cells[j].innerHTML;
 
            if(arr[i][j]==name){
-         tbody.rows[i].style.display="none";
+              r = i;
+           }
+           
           //  tbody.rows[i].innerHTML = arr[i];
             //else
              //tbody.rows[i].style.display = "none";
-          }
+          
        }
      }
+     for(i = 0; i < rlen; i++){
+        if(i === r){
+           continue;
+        }
+        else{
+           tbody.rows[i].style.display="none";
+        }
+     }
    }
+   
 
 /*var d = 1;
 function displayFilter(temp){
