@@ -49,10 +49,10 @@
    body.innerHTML = str;
 
 
-document.getElementById("th1").addEventListener("click",sorting1);
-document.getElementById("th2").addEventListener("click",sorting2);
-document.getElementById("th3").addEventListener("click",sorting3);
-document.getElementById("button").addEventListener("click",Filter);
+th1.addEventListener("click",sorting1);
+th2.addEventListener("click",sorting2);
+th3.addEventListener("click",sorting3);
+button.addEventListener("click",Filter);
 
 function sorting1(){
 
