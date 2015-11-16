@@ -133,7 +133,7 @@ function Filter() {
           
        }
      }
-     for(i = 0; i < rlen; i++){
+     for(i = 1; i < rlen; i++){
         if(i === r){
            continue;
         }
